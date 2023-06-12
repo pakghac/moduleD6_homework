@@ -8,6 +8,3 @@ class PostFilter(FilterSet):
         model = Post
         fields = {'dateCreation': ['gt'], 'title': ['icontains'], 'author__authorUser': ['exact']}
 
-
-#class PostCategoryFilter(FilterSet):
-#    postCategory = django_filters.ModelChoiceFilter(queryset=Category.objects.all(), empty_label=None)

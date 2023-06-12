@@ -5,7 +5,7 @@ from .views import PostList, PostDetail, PostSearch, PostCreate, PostEdit, PostD
 app_name = 'newspaperapp'
 urlpatterns = [
     path('', PostList.as_view()),
-    path('<int:pk>', PostDetail.as_view()),
+    path('<int:pk>', PostDetail.as_view(), name='details'),
     path('search', PostSearch.as_view()),
     path('add', PostCreate.as_view()),
     path('<int:pk>/edit', PostEdit.as_view()),
